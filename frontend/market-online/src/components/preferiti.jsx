@@ -10,6 +10,7 @@ export default function Preferiti({ onClose }) {
 
   // VERIFICO SE L'UTENTE è LOGGATO E PRENDO IL SUO USER ID
   const userid = user ? user._id : "Ospite";
+  console.log(userid)
 
   // ELEMENTI DI TIPO USESTATE
   const [preferiti, setPreferiti] = useState([]);
@@ -44,10 +45,10 @@ export default function Preferiti({ onClose }) {
       <div className="lista">
         {preferiti.map((prodotto, index) => (
           <div key={index} className="prodotto">
-            <img src={prodotto.product.image} alt={prodotto.product.nome} />
-            <p className="name">{prodotto.product.nome}</p>
+            <img src={prodotto.image} alt={prodotto.nome} />
+            <p className="name">{prodotto.nome}</p>
             <p>
-              <b>{prodotto.product.price}€</b>
+              <b>{prodotto.price}€</b>
             </p>
           </div>
         ))}

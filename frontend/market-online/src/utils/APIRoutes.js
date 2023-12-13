@@ -5,5 +5,5 @@ export const addToCartRoute = (userId, productId, quantity) =>`${host}/api/produ
 export const getAllProducts = `${host}/api/products/getAllProducts`;
 export const addToFavorites =(userId, productId)=> `${host}/api/products/addToFavorite/${userId}/${productId}`;
 export const getFromCart =(userId)=> `${host}/api/products/getFromCart/${userId}`;
-export const getFavoriteProducts =(userId)=> `${host}/api/products/getFromCart/${userId}`;
+export const getFavoriteProducts =(userId)=> `${host}/api/products/getFavoriteProducts/${userId}`;
 
